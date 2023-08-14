@@ -1,9 +1,9 @@
-import Welcome from "../../atom/Welcome/Welcome";
+import Auth from "../../atom/Auth/Auth";
 
 const Landing = () => {
   return (
     <div style={{height:"100vh"}}>
-        <Welcome />
+        <Auth />
     </div>
   )
 }
