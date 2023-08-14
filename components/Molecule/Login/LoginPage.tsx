@@ -43,5 +43,4 @@ const LoginPage: NextPage<LoginTypes> = ({ items }) => {
     </div>
   );
 };
-
 export default LoginPage;
