@@ -7,11 +7,11 @@ import { useRouter } from "next/router";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .email("آدرس ایمیل وارد شده صحیح نمی باشد")
-    .required("لطفا ایمیل خود را کنید"),
+    .email("Invalid email address. Please enter a valid email.")
+    .required("please enter your email."),
   password: Yup.string()
-    .min(8, "پسوورد باید حداقل ۸ کاراکتر داشته باشد")
-    .required("لطفا پسوورد خود را کنید"),
+    .min(8,"Password must be at least 8 characters long.")
+    .required("Please enter your password."),
 });
 
 
