@@ -31,10 +31,12 @@ const LoginPage: NextPage<LoginTypes> = ({ items }) => {
                 <Col>
                   <LoginAuth/>
                 </Col>
+              </Row>
+              <Col>
                  <Title level={5}>
                  Dont have an account? <Link href="/signup">Sign up here</Link>
                  </Title>
-              </Row>
+                 </Col>
             </Col>
           </Row>
         </Col>
