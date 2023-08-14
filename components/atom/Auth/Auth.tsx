@@ -5,10 +5,15 @@ import { Col,
         Space 
 } from "antd";
 import ChatgptIcon from "../Icons/ChatgptIcon";
+import { useRouter } from "next/router";
 
 const { Title } = Typography;
 
-const Welcome = () => {
+const Auth = () => {
+    const router = useRouter();
+    const handller = (input:string) => {
+        router.push(`/${input}`);
+    };
   return (
     <div
       style={{
@@ -30,7 +35,7 @@ const Welcome = () => {
           <ChatgptIcon />
         </Col>
         <Col span={24} style={{ textAlign: "center" }}>
-          <Title level={5} style={{ color: "#fff" }}>
+          <Title level={3} style={{ color: "#fff" }}>
             Welcome to ChatGPT
           </Title>
         </Col>
@@ -38,7 +43,7 @@ const Welcome = () => {
           span={24}
           style={{ textAlign: "center", margin: "-20px 0px 0px 0px" }}
         >
-          <Title level={5} style={{ color: "#fff" }}>
+          <Title level={3} style={{ color: "#fff" }}>
             Log in with your OpenAI account to continue
           </Title>
         </Col>
@@ -50,6 +55,7 @@ const Welcome = () => {
                 borderColor: "#10A37F",
                 color: "#fff",
               }}
+              onClick={()=>handller("login")}
             >
               Login
             </Button>
@@ -59,6 +65,7 @@ const Welcome = () => {
                 borderColor: "#10A37F",
                 color: "#fff",
               }}
+              onClick={()=>handller("signup")}
             >
               Sign up
             </Button>
@@ -69,4 +76,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Auth;
