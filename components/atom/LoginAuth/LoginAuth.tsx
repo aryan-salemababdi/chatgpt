@@ -27,7 +27,7 @@ const LoginAuth: NextPage = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values));
-      router.push("/chatgpt")
+      router.push("/chat")
     },
   });
 
