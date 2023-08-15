@@ -1,0 +1,12 @@
+.chatPage{
+    background: #343541;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 767px) {
+    .chatPage {
+     width:0
+    }
+  }
