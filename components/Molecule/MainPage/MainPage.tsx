@@ -1,29 +1,24 @@
-import { Button, Col, Row, Space, Typography } from "antd";
+import { Button, Col, Divider, Row, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import style from "./ChatPage.module.css";
 import MenuIcon from "../../atom/Icons/MenuIcon";
 import HamburgerMenu from "../../atom/Icons/HamburgerMenu";
 import Plus from "../../atom/Icons/Plus";
 import MenuChat from "../../atom/MenuChat/MenuChat";
+import InputChat from "../../atom/InputChat/InputChat";
+import Sidebar from "../../atom/Sidebar/Sidebar";
 
 const { Title } = Typography;
 
-const ChatPage = () => {
+const MainPage = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(true);
-  const [select,setSelect] = useState<string>("GPT3.5")
-
+  const [select, setSelect] = useState<string>("GPT3.5");
   return (
     <div>
       <Row>
         <Col xs={24} sm={24}>
           {!openMenu ? (
-            <Col
-              md={2}
-              sm={24}
-              xs={24}
-              className={style.chatPage}
-              style={{ position: "sticky", top: 0 }}
-            >
+            <Col md={2} sm={24} xs={24} className={style.navBar}>
               <Col sm={4} xs={4}>
                 <Button
                   style={{
@@ -58,7 +53,7 @@ const ChatPage = () => {
                     margin: "10px",
                     width: "50px",
                   }}
-                  onClick={() => setOpenMenu(!openMenu)}
+                  onClick={() => alert("Create New Chat and push to ChatPage")}
                   block
                 >
                   <Plus />
@@ -66,53 +61,14 @@ const ChatPage = () => {
               </Col>
             </Col>
           ) : (
-            <Col
-              md={21}
-              sm={12}
-              xs={16}
-              style={{
-                background: "#343541",
-                display: "flex",
-                justifyContent: "space-between",
-                height: "100vh",
-                width: "300px",
+            <Sidebar
+              open={(open) => {
+                setOpenMenu(open);
               }}
-            >
-              <Button
-                style={{
-                  color: "#fff",
-                  borderColor: "#10A37F",
-                  background: "none",
-                  margin: "10px",
-                  width: "200px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-                block
-              >
-                <Plus />
-                NewChat
-              </Button>
-              <Button
-                style={{
-                  color: "#fff",
-                  background: "#343541",
-                  borderColor: "#343541",
-                  margin: "12px",
-                }}
-                onClick={() => setOpenMenu(!openMenu)}
-              >
-                <MenuIcon />
-              </Button>
-            </Col>
+            />
           )}
         </Col>
-        <Col
-          xs={24}
-          sm={24}
-          md={24}
-          style={{ display: openMenu ? "none" : "" }}
-        >
+        <Col xs={24} sm={24} md={24}>
           <Row justify="center">
             <Col xs={24} sm={24} md={24}>
               <Row justify="center">
@@ -131,31 +87,35 @@ const ChatPage = () => {
                       background: "#202123",
                       padding: "5px",
                       borderRadius: "10px",
-                      marginTop: "5px",
+                      marginTop: "60px",
+                      width:"250px",
+                      textAlign:"center"
                     }}
                   >
                     <Button
                       style={{
                         color: "#fff",
-                        background: select === "GPT3.5"? "#40414f" : "none",
-                        borderColor: select === "GPT3.5"? "#40414f" : "#202123"
+                        background: select === "GPT3.5" ? "#40414f" : "none",
+                        borderColor:select === "GPT3.5" ? "#40414f" : "#202123",
+                        width:"120px",
                       }}
-                      onClick={()=>{
-                        setSelect("GPT3.5")
+                      onClick={() => {
+                        setSelect("GPT3.5");
                       }}
                     >
                       GPT3.5
                     </Button>
-                    <Button 
-                    type="text" 
-                    style={{ 
-                      color: "#fff",
-                      background: select === "GPT4"? "#40414f" : "none",
-                      borderColor: select === "GPT4"? "#40414f" : "#202123"
-                   }}
-                    onClick={()=>{
-                      setSelect("GPT4")
-                    }}
+                    <Button
+                      type="text"
+                      style={{
+                        color: "#fff",
+                        background: select === "GPT4" ? "#40414f" : "none",
+                        borderColor: select === "GPT4" ? "#40414f" : "#202123",
+                        width:"120px",
+                      }}
+                      onClick={() => {
+                        setSelect("GPT4");
+                      }}
                     >
                       GPT4
                     </Button>
@@ -170,10 +130,19 @@ const ChatPage = () => {
         ChatGPT
       </Title>
       <Row>
-        <MenuChat />
+        <Col span={4}></Col>
+        <Col span={16} style={{ marginTop: "420px" }}>
+          <MenuChat />
+          <Divider orientation="center"></Divider>
+          <InputChat />
+          <p style={{ textAlign: "center" }}>
+            &copy;Free Research Preview. ChatGPT may produce inaccurate
+            information about people, places, or facts. ChatGPT August 3 Version
+          </p>
+        </Col>
+        <Col span={4}></Col>
       </Row>
     </div>
   );
 };
-
-export default ChatPage;
+export default MainPage;

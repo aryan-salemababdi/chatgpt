@@ -1,37 +1,44 @@
-.chatPage {
+.navBar {
     background: #343541;
     display: flex;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.rightMenu{
+.rightMenu {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
 @media screen and (min-width: 767px) {
-    .chatPage {
+    .navBar {
         width: 0
     }
+
     .hamburgerMenu {
         visibility: hidden;
-        text-align: center;
     }
-    .menuButton{
-        margin:10px;
-        background:none;
+
+    .menuButton {
+        margin: 10px;
+        background: none;
     }
-    .rightMenu{
+
+    .rightMenu {
         visibility: hidden;
-        display:none;
+        display: none;
     }
-    .title{
+
+    .title {
         display: none;
     }
 }
@@ -39,9 +46,10 @@
 @media screen and (max-width: 767px) {
     .menuIcon {
         visibility: hidden;
-        text-align:center;
+        text-align: center;
     }
-    .menuButton{
+
+    .menuButton {
         margin: 11px 0px;
         background: #343541;
         border-color: #343541;

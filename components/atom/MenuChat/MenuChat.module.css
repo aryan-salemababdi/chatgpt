@@ -1,0 +1,32 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+}
+
+.menuButton {
+    border-color: #c5c5d2;
+    ;
+    height: fit-content;
+    width: 300px;
+    text-align: left;
+}
+
+@media screen and (min-width: 767px) {
+
+    .menu {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .menuButton {
+        margin: 10px 30px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+    }
+}

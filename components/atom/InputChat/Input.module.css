@@ -1,0 +1,12 @@
+.Input {
+    background-color: #40414f;
+    border-color: none;
+    color: #fff;
+    height: auto;
+    resize: vertical;
+    width:500px
+}
+
+.Input::placeholder {
+    color: #fff;
+}

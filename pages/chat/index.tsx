@@ -1,11 +1,11 @@
-import ChatPage from "../../components/Molecule/ChatPage/ChatPage";
+import MainPage from "../../components/Molecule/MainPage/MainPage";
 import style from "../../styles/Home.module.css";
 
 const Chat = () => {
   return (
-    <div className={style.container} style={{height:"100vh",width:"100%"}}>
+    <div className={style.container} style={{width:"100%"}}>
         
-        <ChatPage />
+        <MainPage />
 
     </div>
   )
