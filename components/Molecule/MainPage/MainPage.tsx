@@ -50,7 +50,7 @@ const MainPage = () => {
                     color: "#fff",
                     background: "#343541",
                     borderColor: "#343541",
-                    margin: "10px",
+                    margin: "9px",
                     width: "50px",
                   }}
                   onClick={() => alert("Create New Chat and push to ChatPage")}
