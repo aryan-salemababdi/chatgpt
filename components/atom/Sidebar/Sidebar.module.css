@@ -1,0 +1,12 @@
+.sidebar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #343541;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    z-Index: 1000;
+}
