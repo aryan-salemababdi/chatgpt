@@ -1,12 +1,50 @@
-.chatPage{
+.chatPage {
     background: #343541;
     display: flex;
-    justify-content: space-between;
 }
 
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightMenu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 @media screen and (min-width: 767px) {
     .chatPage {
-     width:0
+        width: 0
     }
-  }
+    .hamburgerMenu {
+        visibility: hidden;
+        text-align: center;
+    }
+    .menuButton{
+        margin:10px;
+        background:none;
+    }
+    .rightMenu{
+        visibility: hidden;
+        display:none;
+    }
+    .title{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menuIcon {
+        visibility: hidden;
+        text-align:center;
+    }
+    .menuButton{
+        margin: 11px 0px;
+        background: #343541;
+        border-color: #343541;
+    }
+
+}
