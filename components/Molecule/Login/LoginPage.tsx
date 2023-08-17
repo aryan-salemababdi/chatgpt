@@ -1,6 +1,10 @@
 import { ReactNode, useState } from "react";
 import { NextPage } from "next";
-import { Col, Row, Typography } from "antd";
+import { Col,
+         Divider,
+         Row,
+         Typography
+        } from "antd";
 import LoginAuth from "../../atom/LoginAuth/LoginAuth";
 import Link from "next/link";
 
@@ -37,6 +41,18 @@ const LoginPage: NextPage<LoginTypes> = ({ items }) => {
                 </Title>
               </Col>
             </Col>
+            <Col span={7}></Col>
+            <Col
+              span={10}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Divider style={{ borderTop:"1px"}}>Or</Divider>
+            </Col>
+            <Col span={7}></Col>
           </Row>
         </Col>
       </Row>
