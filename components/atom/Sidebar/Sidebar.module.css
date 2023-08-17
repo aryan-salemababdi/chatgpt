@@ -5,8 +5,25 @@
     bottom: 0;
     left: 0;
     background: #343541;
-    display: flex;
     width: 300px;
-    justify-content: space-between;
     z-Index: 1000;
+}
+
+.buttonSidebar{
+    color: #fff;
+    background-color: #d9d9e3;
+    background: none;
+    margin: 10px;
+    width: 280px;
+    height:fit-content;
+    align-items:center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomSiderbar{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
 }
