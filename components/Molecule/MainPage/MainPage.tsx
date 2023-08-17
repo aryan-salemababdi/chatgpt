@@ -1,5 +1,10 @@
-import { Button, Col, Divider, Row, Typography } from "antd";
-import React, { useEffect, useState } from "react";
+import { Button,
+         Col,
+         Divider,
+         Row,
+         Typography
+         } from "antd";
+import React, { useState } from "react";
 import style from "./ChatPage.module.css";
 import MenuIcon from "../../atom/Icons/MenuIcon";
 import HamburgerMenu from "../../atom/Icons/HamburgerMenu";
